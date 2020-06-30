@@ -19,7 +19,6 @@ import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.item.crafting.AbstractCookingRecipe;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.item.crafting.RecipeItemHelper;
@@ -468,7 +467,7 @@ public abstract class TileEntityAbstractGrinder extends LockableTileEntity imple
         for(Object2IntMap.Entry<ResourceLocation> entry : this.field_214022_n.object2IntEntrySet()) {
             p_235640_1_.getRecipeManager().getRecipe(entry.getKey()).ifPresent((p_235642_4_) -> {
                 list.add(p_235642_4_);
-                func_235641_a_(p_235640_1_, p_235640_2_, entry.getIntValue(), ((AbstractCookingRecipe)p_235642_4_).getExperience());
+                func_235641_a_(p_235640_1_, p_235640_2_, entry.getIntValue(), ((AbstractCustomRecipe)p_235642_4_).getExperience());
             });
         }
 
